@@ -1,0 +1,41 @@
+{% extends 'AppConsultorio/base.html' %}
+{% load static %}
+{% block titulo %}
+    inicio
+{% endblock titulo %}
+{% block main %}
+                <div class="text-center">
+                    <h1 class="mx-auto my-0 text-uppercase">CONSULTORIO MEDICO</h1>
+                    <h2 class="text-white-50 mx-auto mt-2 mb-5">Para poder reservar un turno o ver los doctores disponibles, por favor <a href="#">inicie sesion</a> o <a href="#">cree una cuenta </a></h2>
+                    <a class="btn btn-primary" href="{% url 'login' %}">Iniciar Sesion</a>
+                    <a class="btn btn-primary" href="{% url 'registro_usuario' %}">Crear una cuenta</a>
+                </div>
+            </div>
+        </div>
+        </header>
+        <section class="about-section text-center" id="about">
+            <div class="container px-4 px-lg-5">
+                <img class="img-fluid" src="{% static 'AppConsultorio/assets/img/doc3.png' %}" alt="..." />
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4">Consultorio medico</h2>
+                        <p class="text-white-50">
+                            Nuestro consultorio medico cuenta un personal profesional, amable y respetuoso. Contamos con una experiencia en el servicio de 18 años (desde 2005).
+                        </p>
+                    </div>
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4">Proyecto final</h2>
+                        <p class="text-white-50">
+                            Este proyecto fue creado por Iñaki Serrano, cuenta con formularios de iniciar sesion en una cuenta, registrar una cuenta, solicitar un turno, registrarse como doctor y ver los doctores disponibles.
+                        </p>
+                    </div>
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4">Sobre mí</h2>
+                        <p class="text-white-50">
+                            Soy Iñaki Serrano, tengo 20 años, soy Tecnico en programacion de la escula Tecnica n°3, me inscribi en el curso de python porque queria ampliar mis conocimientos y a su vez estoy realizando elc urso de Java Script en CoderHouse
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock main %}

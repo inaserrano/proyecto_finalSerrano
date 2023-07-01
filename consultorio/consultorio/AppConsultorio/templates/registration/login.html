@@ -1,0 +1,17 @@
+{% extends 'AppConsultorio/base.html' %}
+{% load static %}
+{% block titulo %}
+    login
+{% endblock titulo %}
+{% block main %}
+    <h1>Iniciar Sesion</h1>
+    <div>
+        <form action="" method="POST" style="color: white;">
+            {% csrf_token %}
+            <table>
+                {{ form.as_table }}
+            </table>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+{% endblock main %}
