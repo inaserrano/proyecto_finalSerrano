@@ -6,7 +6,7 @@
 {% block main %}
                 <div class="text-center">
                     <h1 class="mx-auto my-0 text-uppercase">CONSULTORIO MEDICO</h1>
-                    <h2 class="text-white-50 mx-auto mt-2 mb-5">Para poder reservar un turno o ver los doctores disponibles, por favor <a href="#">inicie sesion</a> o <a href="#">cree una cuenta </a></h2>
+                    <h2 class="text-white-50 mx-auto mt-2 mb-5">Para poder reservar un turno o ver los doctores disponibles, por favor <a href="{% url 'login' %}">inicie sesion</a> o <a href="{% url 'registro_usuario' %}">cree una cuenta </a></h2>
                     <a class="btn btn-primary" href="{% url 'login' %}">Iniciar Sesion</a>
                     <a class="btn btn-primary" href="{% url 'registro_usuario' %}">Crear una cuenta</a>
                 </div>

@@ -1,4 +1,5 @@
 from django import forms
+from .models import Turno
 from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
@@ -8,3 +9,8 @@ class CustomUserForm(UserCreationForm):
         model = User
         fields = ['first_name','last_name','username','password1','password2']
         help_texts = {k:"" for k in fields}
+
+class TurnoForm(forms.ModelForm):
+    class Meta:
+        model = Turno
+        fields = ['nombre','apellido','email','dni','especialidad']

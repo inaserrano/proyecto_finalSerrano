@@ -1,0 +1,15 @@
+{% extends 'AppConsultorio/base.html' %}
+{% load static %}
+{% block titulo %}
+    exito
+{% endblock titulo %}
+{% block main %}
+<div class="text-center">
+    <h1 class="mx-auto my-0 text-uppercase">Turno:</h1>
+    <h2 class="text-white-50 mx-auto mt-2 mb-5">Nombre: {{ turno.nombre }}<br>Apellido: {{ turno.apellido }}<br>E-mail: {{ turno.email }}<br>Dni: {{ turno.dni }}<br>Especialidad: {{ turno.especialidad }}<br></h2>
+    <a class="btn btn-primary" href="{% url 'solicitud_turno' %}">Solicitar otro turno</a>
+    <a class="btn btn-primary" href="{% url 'inicio_l' %}">Volver al Inicio</a>
+</div>
+</div>
+</div>
+{% endblock main %}

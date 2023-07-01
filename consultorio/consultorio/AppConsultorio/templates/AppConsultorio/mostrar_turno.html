@@ -1,0 +1,15 @@
+{% extends 'AppConsultorio/base.html' %}
+{% load static %}
+{% block titulo %}
+    exito
+{% endblock titulo %}
+{% block main %}
+        <div class="text-center">
+            <h1 class="mx-auto my-0 text-uppercase">Turno solicitado!</h1>
+            <h2 class="text-white-50 mx-auto mt-2 mb-5">El turno fue solicitado exitosamente</h2>
+            <a class="btn btn-primary" href="{% url 'info' %}">Mas info!</a>
+            <a class="btn btn-primary" href="{% url 'inicio_l' %}">Volver al inicio</a>
+        </div>
+    </div>
+</div>
+{% endblock main %}
