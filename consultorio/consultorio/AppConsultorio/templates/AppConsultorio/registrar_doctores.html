@@ -1,0 +1,19 @@
+{% extends 'AppConsultorio/base.html' %}
+{% load static %}
+{% block titulo %}
+    Registrar doctores
+{% endblock titulo %}
+{% block main %}
+<div class="text-center">
+    <h1 class="mx-auto my-0 text-uppercase">Registrar Doctores</h1>
+    <form method="post" style="color: white;">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enviar</button>
+    </form>
+    <a class="btn btn-primary" href="{% url 'registrar_doctor' %}">Registrar Otro doctor</a>
+    <a class="btn btn-primary" href="{% url 'inicio_l' %}">Volver al Inicio</a>
+</div>
+</div>
+</div>
+{% endblock main %}

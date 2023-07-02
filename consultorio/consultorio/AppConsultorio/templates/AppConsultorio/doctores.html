@@ -1,0 +1,23 @@
+{% extends 'AppConsultorio/base.html' %}
+{% load static %}
+{% block titulo %}
+    Mostrar Doctores Registrados
+{% endblock titulo %}
+{% block main %}
+
+    {% for doctor in doctores %}
+    <div>
+        <table>
+            <p style="color: white;">Nombre: {{ doctor.nombre }}</p>
+            <p style="color: white;">Apellido: {{ doctor.apellido }}</p>
+            <p style="color: white;">Número de Licencia: {{ doctor.num_licencia }}</p>
+            <p style="color: white;">Email: {{ doctor.email }}</p>
+            <p style="color: white;">DNI: {{ doctor.dni }}</p>
+            <hr>
+        </table>    
+    </div>
+        {% empty %}
+            <p>No hay doctores registrad style="color: white;"os.</p>
+    {% endfor %}
+
+{% endblock main %}

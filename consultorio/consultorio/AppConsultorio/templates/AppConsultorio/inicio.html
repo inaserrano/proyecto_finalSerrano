@@ -7,9 +7,13 @@
 <div class="text-center">
     <h1 class="mx-auto my-0 text-uppercase">CONSULTORIO MEDICO</h1>
     <h2 class="text-white-50 mx-auto mt-2 mb-5">Inicio de sesion exitoso!, has iniciado sesion como: {{ user.username }}<br>Ahora puedes:</a></h2>
-    <a class="btn btn-primary" href="{% url 'login' %}">Solicitar un turno</a>
-    <a class="btn btn-primary" href="{% url 'registro_usuario' %}">Ver doctores disponibles</a>
+    <a class="btn btn-primary" href="{% url 'solicitud_turno' %}">Solicitar un turno</a>
+    <a class="btn btn-primary" href="{% url 'ver_doctores' %}">Ver doctores disponibles</a>
     <a class="btn btn-primary" href="{% url 'registro_usuario' %}">Editar perfil</a>
+    {% if user.is_superuser %}
+        <a class="btn btn-primary" href="{% url 'registrar_doctor' %}">Agregar Doctores</a>
+    {% endif %}
+    
 </div>
 </div>
 </div>

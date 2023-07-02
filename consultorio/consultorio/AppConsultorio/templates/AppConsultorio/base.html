@@ -33,7 +33,6 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="#about">SOBRE NOSOTROS</a></li>
                         {% if user.is_authenticated %}
-                            <li class="nav-item"><a class="nav-link" href="{% url 'solicitud_turno' %}">SOLICITAR TURNO </a></li>
                             <li class="nav-item"><a class="nav-link">USUARIO: {{ user.username }}</a></li>
                             <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">CERRAR SESION </a></li>
                         {% endif %}
