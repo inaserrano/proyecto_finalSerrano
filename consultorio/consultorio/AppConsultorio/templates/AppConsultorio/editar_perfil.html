@@ -4,5 +4,21 @@
     Editar Perfil
 {% endblock titulo %}
 {% block main %}
-    <h1>Editar perfil {{ user.username }}</h1>
+<div class="text-center">
+    <h1 class="mx-auto my-0 text-uppercase">Editar Perfil</h1>
+    <h2 class="text-white-50 mx-auto mt-2 mb-5">Usuario: {{user}}</h2>
+    <a class="btn btn-primary" href="{% url 'solicitud_turno' %}">Solicitar otro turno</a>
+    <a class="btn btn-primary" href="{% url 'inicio_l' %}">Volver al Inicio</a>
+    <div>
+        <form action="" method="POST">
+            <table>
+                {% csrf_token %}
+                {{ miFormulario.as_table }}
+            </table>
+            <input type="submit" class="btn btn-primary" value="Enviar">
+        </form>
+    </div>
+</div>
+</div>
+</div>
 {% endblock main %}

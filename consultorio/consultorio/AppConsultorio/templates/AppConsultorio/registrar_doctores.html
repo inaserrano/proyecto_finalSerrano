@@ -9,7 +9,7 @@
     <form method="post" style="color: white;">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Enviar</button>
+        <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
     <a class="btn btn-primary" href="{% url 'registrar_doctor' %}">Registrar Otro doctor</a>
     <a class="btn btn-primary" href="{% url 'inicio_l' %}">Volver al Inicio</a>

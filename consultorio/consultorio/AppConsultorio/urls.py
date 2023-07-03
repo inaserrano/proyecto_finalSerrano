@@ -9,4 +9,6 @@ urlpatterns = [
     path('inicio_l/',views.inicio_logeado,name='inicio_l'),
     path('registrar_doctor/',views.registrar_doctor,name='registrar_doctor'),
     path('ver_doctores/',views.ver_doctores,name="ver_doctores"),
+    path('editar_perfil/',views.editar_perfil,name='editar_perfil'),
+
 ]
